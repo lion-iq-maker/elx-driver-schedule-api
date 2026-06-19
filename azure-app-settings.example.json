@@ -1,0 +1,7 @@
+{
+  "FUNCTIONS_WORKER_RUNTIME": "node",
+  "WEBSITE_NODE_DEFAULT_VERSION": "~20",
+  "ALLOWED_ORIGIN": "https://your-approved-frontend-domain.example",
+  "REQUIRE_AUTH": "true",
+  "SQL_CONNECTION_STRING": "store-this-in-key-vault-or-secure-function-app-settings"
+}

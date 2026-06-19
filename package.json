@@ -1,0 +1,24 @@
+{
+  "name": "elx-driver-schedule-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Azure Functions API foundation for ELX Driver Schedule.",
+  "main": "dist/functions/*.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "func start",
+    "test:api": "node scripts/smoke-test-api.js",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.7.2",
+    "mssql": "^12.5.5"
+  },
+  "devDependencies": {
+    "@types/mssql": "^12.3.0",
+    "@types/node": "^20.19.1",
+    "azure-functions-core-tools": "^4.12.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3"
+  }
+}
