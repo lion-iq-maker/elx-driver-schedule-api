@@ -43,7 +43,7 @@ export function validateRole(request: HttpRequest, allowedRoles: StaffRole[]): H
   return null;
 }
 
-function getRequestRoles(request: HttpRequest): StaffRole[] {
+export function getRequestRoles(request: HttpRequest): StaffRole[] {
   const roles = new Set<StaffRole>();
   const rawRoles = request.headers.get("x-ms-client-principal-roles") ?? "";
 
