@@ -77,7 +77,9 @@ export function getRequestRoles(request: HttpRequest): StaffRole[] {
 
   return Array.from(roles);
 }
-
 function isStaffRole(role: unknown): role is StaffRole {
-  return role === "Admin" || role === "Scheduler" || role === "Viewer";
+  if (typeof role !== "string") return false;
+  const normalized = role.trim().toLowerCase();
+  return normalized === "admin" || normalized === "scheduler" || normalized === "viewer";
 }
+"Fix: case-insensitive role matching"
